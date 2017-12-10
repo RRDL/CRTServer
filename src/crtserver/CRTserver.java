@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 /**
@@ -87,9 +88,12 @@ public class CRTserver {
         }
     }
     public static void main(String[] args) {
+        System.out.println("select port");
+        Scanner sc = new Scanner(System.in);
+        int port = sc.nextInt();
         System.out.println("Starting CRT server");
-        System.out.println("server port : 2222 ");
-        CRTserver server = new CRTserver(2222);
+        System.out.println("server port : "+port);
+        CRTserver server = new CRTserver(port);
     }
 }
 
